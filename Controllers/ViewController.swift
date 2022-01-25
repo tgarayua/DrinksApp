@@ -11,10 +11,13 @@ class ViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     
+    let apiService = APIService()
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // runs the api call
+        apiService.parse()
         
         tableView.delegate = self
         tableView.dataSource = self
